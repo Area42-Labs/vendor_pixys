@@ -106,3 +106,11 @@ PRODUCT_PACKAGES += \
 
 -include $(WORKSPACE)/build_env/image-auto-bits.mk
 -include vendor/pixys/config/partner_gms.mk
+
+# Face Unlock
+PRODUCT_PACKAGES += \
+    FaceUnlockService
+TARGET_FACE_UNLOCK_SUPPORTED := true
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    ro.face.moto_unlock_service=true
+
